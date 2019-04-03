@@ -1,11 +1,11 @@
 Restaurant.destroy_all
 
-11.times  do
+5.times  do
   Restaurant.create!(
-    name: Faker::Restaurant.name ,
-    category: Faker::Restaurant.type,
-    phone_number: Faker::PhoneNumber.phone_number
-
+    name: Faker::Restaurant.name,
+    category: ["chinese", "italian", "japanese", "french", "belgian"].sample,
+    phone_number: Faker::PhoneNumber.phone_number,
+    address: Faker::Address.street_address,
     )
 
 end
